@@ -1,0 +1,30 @@
+{
+  "name": "copy-fs-fonts",
+  "version": "0.2.4",
+  "description": "A command-line utility (CLI) for extracting and copying @fontsource font files and styles.",
+  "keywords": [
+    "copy fonts",
+    "@fontsource",
+    "copy CLI"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:react5com/copy-fonts.git"
+  },
+  "license": "MIT",
+  "author": "React5",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "copy-fonts": "./bin/copy-fonts.js"
+  },
+  "files": [
+    "index.js",
+    "bin/"
+  ],
+  "scripts": {
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3"
+  }
+}
