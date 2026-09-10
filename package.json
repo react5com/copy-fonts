@@ -1,6 +1,6 @@
 {
   "name": "copy-fs-fonts",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "A command-line utility (CLI) for extracting and copying @fontsource font files and styles.",
   "keywords": [
     "copy fonts",
@@ -23,6 +23,7 @@
     "bin/"
   ],
   "scripts": {
+    "test": "node --test"
   },
   "dependencies": {
     "chokidar": "^4.0.3"

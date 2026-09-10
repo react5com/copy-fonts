@@ -15,11 +15,13 @@ function findCssFilesOfFonts(fileName, fileList = []) {
   return fileList;
 }
 
+export function extractImports(source) {
+  return [...source.matchAll(/^\s*import\s+(['"])([^'"]+)\1\s*;?\s*$/gm)]
+    .map(([, , fontImport]) => fontImport);
+}
+
 function extractImportsFromFile(fileName) {
-  return fs.readFileSync(fileName, 'utf8')
-    .split('\n')
-    .filter(line => line.startsWith('import'))
-    .map(line => line.match(/'([^']+)'/)[1]);
+  return extractImports(fs.readFileSync(fileName, 'utf8'));
 }
 
 function copyFontFolders(fontImport, destDir) {
